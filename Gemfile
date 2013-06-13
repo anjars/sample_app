@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem 'bcrypt-ruby'
 
 
 # Bundle edge Rails instead:
@@ -27,6 +28,10 @@ gem 'jquery-rails'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+
+group :development do
+  gem 'annotate', '2.5.0'
+end
 
 group :test do
   gem 'capybara', '1.1.2'
