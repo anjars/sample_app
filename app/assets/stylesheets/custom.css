@@ -3,7 +3,7 @@ html {
  	overflow-y: scroll;
  }
 body {
-	padding-top: 60px;
+	padding-top: 75px;
 }
 section {
  	overflow: auto;
@@ -82,4 +82,54 @@ footer ul li {
   	float: left;
  	margin-left: 10px;
  }
+
+ .debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside  h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  aside section {
+    padding: 10px 0;
+    border-top: 1px solid #dedede;
+  }
+  aside section:first-child {
+    border: 0;
+      padding-top: 0;
+    }
+      aside span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+
+  }
+  /* Forms */
+  input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  line-height: 2em;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ input {
+  height: auto !important;
+}
+
  

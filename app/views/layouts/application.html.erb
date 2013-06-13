@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= full_title(yield(:title)) %></title>
-    <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %>
-    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= full_title(yield(:title)) %></title>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 
-    <%= stylesheet_link_tag "application", :media => "all" %>
-  </head>
-  <body>
 
-   <%= render 'layouts/header' %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+</head>
+<body>
 
-    <div class="container">
-        <div class="row">
-          <div class="span9">
-            <%= bootstrap_flash %>
-            <%= yield %>
-          </div>
-          <div class="span3">
-            <div class="well sidebar-nav">
-              <h3>Sidebar</h3>
-              <ul class="nav nav-list">
-                <li class="nav-header">Sidebar</li>
-                <li><%= link_to "Home", root_path %></li>
-                <li><%= link_to "Help", help_path  %></li>
-                <li><%= link_to "About Us", about_path  %></li>
-                <li><%= link_to "Contact", contact_path  %></li>
-              </ul>
-            </div><!--/.well -->
-          </div><!--/span-->
-        </div><!--/row-->
+ <%= render 'layouts/header' %>
 
-    <%= render 'layouts/footer' %>
+ <div class="container">
+  <div class="row">
+<% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <!-- <%= bootstrap_flash %> -->
+      <%= yield %>
+   
+  </div><!--/row-->
 
-    </div> <!-- /container -->
+  <%= render 'layouts/footer' %>
+  <%= debug(params) if Rails.env.development? %>
+</div> <!-- /container -->
 
     <!-- Javascripts
     ================================================== -->
@@ -45,4 +35,4 @@
     <%= javascript_include_tag "application" %>
 
   </body>
-</html>
+  </html>
